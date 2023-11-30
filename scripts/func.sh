@@ -49,7 +49,7 @@ function getExtractor() {
   fi
   (
     cd "${CACHE_DIR}/ramdisk"
-    xz -dc <rd.gz | cpio -idm
+    xz -dc < rd.gz | cpio -idm
   ) >/dev/null 2>&1 || true
 
   rm -rf "${DEST_PATH}"

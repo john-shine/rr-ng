@@ -923,7 +923,7 @@ function extractDsmFiles() {
       # Extract all files from rd.gz
       (
         cd "${RAMDISK_PATH}"
-        xz -dc <rd.gz | cpio -idm
+        xz -dc < rd.gz | cpio -idm
       ) >/dev/null 2>&1 || true
       # Copy only necessary files
       for f in libcurl.so.4 libmbedcrypto.so.5 libmbedtls.so.13 libmbedx509.so.1 libmsgpackc.so.2 libsodium.so libsynocodesign-ng-virtual-junior-wins.so.7; do
