@@ -1,4 +1,4 @@
-# Redpill Recovery (arpl-i18n)
+# RR-ng
 
 This project is a system for redpill’s preinstallation and recovery environment.
 
