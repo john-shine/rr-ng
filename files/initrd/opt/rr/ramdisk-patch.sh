@@ -125,6 +125,12 @@ echo "_set_conf_kv 'SN' '${SN}' '/tmpRoot/etc.defaults/synoinfo.conf'" >>"${TMP_
 sed -e "/@@@CONFIG-GENERATED@@@/ {" -e "r ${TMP_PATH}/rp.txt" -e 'd' -e '}' -i "${RAMDISK_PATH}/sbin/init.post"
 rm -f "${TMP_PATH}/rp.txt"
 
+# Patch synodiskport
+if [ ! -f "${RAMDISK_PATH}/usr/syno/bin/synodiskportold" ]; then
+  mv "${RAMDISK_PATH}/usr/syno/bin/synodiskport" "${RAMDISK_PATH}/usr/syno/bin/synodiskportold"
+  cp -f "${WORK_PATH}/patch/synodiskport.sh" "${RAMDISK_PATH}/usr/syno/bin/synodiskport"
+fi
+
 echo -n "."
 # Extract modules to ramdisk
 rm -rf "${TMP_PATH}/modules"
