@@ -46,5 +46,3 @@ Credits
     # This process will be automatically processed during packaging.
     msgfmt lang/zh_CN.po -o lang/zh_CN.mo
     ```
-* I am not proficient in language, and even my English is very poor. 
-  Developers who are familiar with various languages are welcome to submit PR.
