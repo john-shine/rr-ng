@@ -42,7 +42,7 @@
     ```shell
     # 在 shell 中下载需要的版本或者手动上传到 ~/ 下
     # Download the required version in the shell or manually upload it to ~/
-    curl -kL -o ~/rr.zip https://github.com/wjz304/rr/releases/download/23.4.5/rr-23.11.1.img.zip
+    curl -kL -o ~/rr.zip https://github.com/john-shine/rr-ng/releases/download/23.4.5/rr-23.11.1.img.zip
     # 卸载挂载的引导盘
     # Uninstalling the mounted boot disk
     umount /mnt/p1 /mnt/p2 /mnt/p3
